@@ -19,6 +19,11 @@ public class Service {
         System.out.println("________________");
     }
 
+    @Override
+    public String toString() {
+        return "serviceName=%s, price=%s, serviceDate=%s".formatted(serviceName, price, serviceDate.toString());
+    }
+
     public String getServiceName() {
         return serviceName;
     }

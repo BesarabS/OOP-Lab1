@@ -35,6 +35,16 @@ public class Car {
         System.out.println("________________");
     }
 
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        for (Service service : services) {
+            sb.append(service.toString()).append("\n");
+        }
+
+        return "model=%s, carType=%s,%n owner=[%s],%n services=[%n%s]".formatted(model, carType, owner.toString(), sb.toString());
+    }
+
     public void addService(Service service) {
         services.add(service);
     }

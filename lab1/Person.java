@@ -11,11 +11,19 @@ public class Person {
         this.birthdate = birthdate;
     }
 
+    public Person() {
+    }
+
     public void printInfo() {
         System.out.printf("PersonInfo. Name: %s, Surname: %s%n ", name, surname);
         System.out.println("Person birthdate: ");
         birthdate.PrintInfo();
         System.out.println("________________");
+    }
+
+    @Override
+    public String toString() {
+        return "name=%s, surname=%s, date= %s".formatted(name, surname, birthdate.toString());
     }
 
     public String getName() {
